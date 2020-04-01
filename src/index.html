@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div id="calculadora" class="flex-column">
+        <div id="header">
+            <input id="console" type="text">
+        </div>
+        <div id="body" class="flex-row">
+            <div class="flex-column">
+                <div id="teclado-1" class="flex-row">
+                    <button onclick="inputValue(this.id)" id="btn_1" class="btn-item">1</button>
+                    <button onclick="inputValue(this.id)" id="btn_2" class="btn-item">2</button>
+                    <button id="btn_3" onclick="inputValue(this.id)" class="btn-item">3</button>
+                    <button id="btn_-" onclick="inputValue(this.id)" class="btn-item">-</button>
+                </div>
+                <div id="teclado-2" class="flex-row">
+                    <button id="btn_4" onclick="inputValue(this.id)" class="btn-item">4</button>
+                    <button id="btn_5" onclick="inputValue(this.id)" class="btn-item">5</button>
+                    <button id="btn_6" onclick="inputValue(this.id)" class="btn-item">6</button>
+                    <button id="btn_+" onclick="inputValue(this.id)" class="btn-item">+</button>
+                </div>
+                <div id="teclado-3" class="flex-row">
+                    <button id="btn_7" onclick="inputValue(this.id)" class="btn-item">7</button>
+                    <button id="btn_8" onclick="inputValue(this.id)" class="btn-item">8</button>
+                    <button id="btn_9" onclick="inputValue(this.id)" class="btn-item">9</button>
+                    <button id="btn_/" onclick="inputValue(this.id)" class="btn-item">/</button>
+                </div>
+                <div id="teclado-4" class="flex-row">
+                    <button id="btn_," onclick="inputValue(this.id)" class="btn-item">,</button>
+                    <button id="btn_0" onclick="inputValue(this.id)" class="btn-item">0</button>
+                    <button id="btn_." onclick="inputValue(this.id)" class="btn-item">.</button>
+                    <button id="btn_*" onclick="inputValue(this.id)" class="btn-item">*</button>
+                </div>
+            </div>
+
+            <div id="teclado-5" class="flex-column">
+                <button id="limpar" onclick="limpar()" class="btn-item">C</button>
+                <button id="btn_=" onclick="getResult()" class="btn-item">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- <script type="module" src="index.js"></script> -->
+<script  src="main.js"></script>
+<script  src="calculadora.js"></script>
+</html>

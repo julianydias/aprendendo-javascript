@@ -1,0 +1,51 @@
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    margin-bottom: 20px;
+}
+
+#console {
+  width: 100%;
+  height: 70px;
+  border-radius: 3px;
+  font-size: large;
+}
+
+#calculadora {
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+#body, #body  div  {
+    width: 100%;
+    height: 100%;
+    margin: 5px 5px;
+}
+
+#teclado-5 {
+    flex: 20%;
+    margin: 5px 5px;
+}
+
+
+.btn-item {
+    margin: 3px 5px;
+    width: 100%;
+    height: 100%;
+}
+
+#limpar {
+    margin-top: 7px;
+    height: 53px;
+}

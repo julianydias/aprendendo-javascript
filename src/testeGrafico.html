@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="chart">
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" integrity="sha256-IvM9nJf/b5l2RoebiFno92E5ONttVyaEEsdemDC6iQA=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" integrity="sha256-TQq84xX6vkwR0Qs1qH5ADkP+MvH0W+9E7TdHJsoIQiM=" crossorigin="anonymous"></script>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+    let labels = ['25/02/2020', '26/02/2020',
+                '27/02/2020',
+                '28/02/2020',
+                '29/02/2020',
+                '01/03/2020',
+                '02/03/2020',
+                '03/03/2020',
+                '04/03/2020',
+                '05/03/2020',
+                '06/03/2020',
+                '07/03/2020',
+                '08/03/2020',
+                '09/03/2020',
+                '10/03/2020',
+                '11/03/2020',
+                '12/03/2020',
+                '13/03/2020',
+                '14/03/2020',
+                '15/03/2020',
+                '16/03/2020',
+                '17/03/2020',
+                '18/03/2020',
+                '19/03/2020',
+                '20/03/2020',
+                '21/03/2020',
+                '22/03/2020',
+                '23/03/2020',
+                '24/03/2020',
+                '25/03/2020',
+                '26/03/2020',
+                '27/03/2020',
+                '28/03/2020',
+                '29/03/2020',
+                '30/03/2020',
+                '31/03/2020'];
+
+
+        let data1 = [0,
+                    1,
+                    1,
+                    1,
+                    2,
+                    2,
+                    2,
+                    2,
+                    3,
+                    8,
+                    13,
+                    19,
+                    24,
+                    30,
+                    34,
+                    69,
+                    78,
+                    98,
+                    121,
+                    200,
+                    234,
+                    291,
+                    428,
+                    621,
+                    904,
+                    1128,
+                    1546,
+                    1891,
+                    2201,
+                    2433,
+                    2915,
+                    3417,
+                    3904,
+                    4256,
+                    4579,
+                    5717,];
+            
+    let data2 = [ 0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  2,
+                  7,
+                  11,
+                  18,
+                  25,
+                  34,
+                  46,
+                  57,
+                  77,
+                  92,
+                  114,
+                  136,
+                  159,
+                  201,]
+    let data = {
+        labels: labels,
+        datasets: [{
+            label: 'Numero de Casos',
+            data: data1,
+            borderColor: [
+                'rgba(255, 0, 0)',
+            ],
+            backgroundColor: [
+                'rgba(255, 0, 0, 0.5)',
+            ]
+        },
+        {
+            label: 'Numero de Mortes',
+            data: data2,
+            borderColor: [
+                'rgba(0, 0, 255)',
+            ],
+            backgroundColor: [
+                'rgba(0, 0, 255, 0.5)',
+            ]
+        }
+        ]
+    };
+
+    var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    // options: options
+});
+
+</script>
+</html>

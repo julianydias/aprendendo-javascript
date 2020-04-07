@@ -6,20 +6,23 @@
  * O TESTE DEVE SER FEITO ATRAVEZ DA FUNCAO MOD
  * OBS: NAO EXISTE FUNCAO MOD NESTE ARQUIVO!
  */
-function parOuImpar(numero1) {
-    var substituido =numero1.replace(/[^\d]/, 'que babaca');
+function parOuImpar(numero) {//4g
 
-    var existeDiferenteNumero = substituido.indexOf('que babaca');
+    var substituido = numero.replace(/[^\d]/g, 'naoNumeros'); //4naoNumeros
+    var existeDiferenteNumero = substituido.indexOf('naoNumeros');//4|naoNumeros|
+//                                                                  0     1 
+    if (existeDiferenteNumero != -1) {
+        console.log('o valor informado é invalido');
+    } else {
+        var resultado = numero % 2;
+        if (resultado === 0){
+            console.log('é par');
+        }else{
+            console.log('é Impar');
 
-
-
-    if(existeDiferenteNumero!= -1) {
-        console.log('existe')
-    }else{
-        console.log('nao existe')
-     if()
+        }
     }
 
 }
 
-parOuImpar('58959')
+parOuImpar('20')

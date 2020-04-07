@@ -35,10 +35,10 @@ let resultado3 = dividir(200,5);
 console.log(resultado3,' divisao');
 
 
-function multiplicaçao(numero1,numero2) {
+function multiplicacao(numero1,numero2) {
     return numero1*numero2;
 }
-let resultado4  = multiplicaçao(1000,10);
+let resultado4  = multiplicacao(1000,10);
 console.log(resultado4,' multiplicaçao ');
 
 

@@ -1,121 +1,75 @@
-/**
- * explicação e exemplo de objetos
- * o que é, e como manipula-lo
- */
-let clientes = [
-    {
-        'nome': 'henrique dias campos',
-        'endereco': {
-            'rua': 'medianeira',
-            'numero': '21A'
-        }
-    },
-    {
-        'nome': 'juliany de souza neves dias',
-        'endereco': {
-            'rua': 'medianeira',
-            'numero': '21A'
-        }
-    },
-    {
-        'nome': 'maria ivanilda de souza neves',
-        'endereco': {
-            'rua': 'serra do cadeado',
-            'numero': '971'
-        }
-    },
-    {
-        'nome': 'robison power rager',
-        'endereco': {
-            'rua': 'serra do pelada',
-            'numero': '91'
-        }
-    },
-    {
-        'nome': 'otavio meskita',
-        'endereco': {
-            'rua': 'depi do di',
-            'numero': '1'
-        }
-    },
-    {
-        'nome': 'marcelo majosso né',
-        'endereco': {
-            'rua': 'catraca livre',
-            'numero': '65'
-        }
-    },
-    {
-        'nome': 'pedro de lara',
-        'endereco': {
-            'rua': 'colchão milano',
-            'numero': '971'
-        }
-    },
-    {
-        'nome': 'lucasssss quem é lucas',
-        'endereco': {
-            'rua': 'nem é de cascavel',
-            'numero': '99'
-        }
-    },
-    {
-        'nome': 'paula tejando',
-        'endereco': {
-            'rua': 'te tucuco',
-            'numero': '71'
-        }
-    },
-]
 
 
 
+//--------------------------------------------------------------------
+//objeto seria um cara que pode receber coisas ligadas a ele,que seriam as propriedades,
+//exemplo://
+//objeto:paciente propriedade:nome,endereco,idade,etc//
 
-// console.log('O '   + objeto.nome + ' mora na rua ' + objeto.endereco.rua + ' n° ' + objeto.endereco.numero );
-
-/**
- * Arrays (listas)
- * apresentado variavel do tipo array
- * e seus componentes
- */
-
-
-let arrayDeNumeros = [2, 3, 4, 10, 44454252342, 1];
-let arrayDeTextos = ['patos', 'ratos', 'galinhas'];
-// let arrayDeObjetos = [objeto, objeto1, objeto2];
-
-// let arrayDeArrays = [arrayDeNumeros, arrayDeTextos, arrayDeObjetos];
-// 'marcelo majosso né'
+// let paciente= new Object();
+// paciente.nome = "juliany";
+// paciente.idade = "37";
+// paciente.endereco = "rua:medianeira N 21";
+// paciente.cabelo = "preto";
 
 
+// let pessoa = {'nome': 'juliany'};
 
 
+//array È um objeto global usado na construcao de "arrays" ou seja :listas
+let frutas = ['maça', 'banana', 'uva', 'manga', 'abacaxi', 'abacate', 'laranja', ];
+// console.log(frutas[0])
 
-
-// function buscarPorNome(nome) {
-//     for (let index = 0; index < clientes.length; index++) {
-//         const cliente = clientes[index];
-//         if (cliente.nome === nome) {
-//             return cliente
-//         }
+// function logArrayElements(fruta) {
+//     if (fruta[0] == 'a') {
+//         console.log(fruta +" começa com a");
 //     }
 // }
 
+// frutas.forEach(fruta => {
+//     if (fruta[0] == 'mari') {
+//         console.log(fruta +" começa com a");
+//     }
+// });
 
-// function buscarPorNome(nome) {
-//     let clie = {};
-//     clientes.forEach(cliente => {
-//         if (cliente.nome === nome) {
-//             clie = cliente;
-//         }
-//     });
+// let pessoas = ['mariana', 'mario sergio cortella', 'amarildo', 'henrique do poder', 'juliany mara', 'amastor'];
 
-//     return clie;
-// }
+// pessoas.forEach(pessoa => {
+//     if (pessoa.indexOf('mari') != -1) {
+//         console.log(pessoa + ' contem mari');
+//     }
+// })
 
-function buscarPorNome(nome) {
-    return clientes.filter(cliente => cliente.nome === nome);
+let pessoas_nomes = [
+    {'nome':'juliany'},
+    {'nome':'Henrique'},
+    {'nome':'marcelo'},
+    {'nome':'viviane'},
+    {'nome':'abner'},
+    {'nome':'ivanilda'},
+    {'nome':'suzy meiry'},
+    {'nome':'fabiano'},
+    {'nome':'suzana'},
+    {'nome':'polliany'},
+    {'nome':'nathan'},
+    {'nome':'vinicius'},
+    {'nome':'thierry'},
+    {'nome':'daiane'},
+    {'nome':'arthur'},
+    {'nome':'beatriz'},
+];
+
+function buscarPessoaPorNome(nome){
+    pessoas_nomes.forEach(pessoa => {
+        if(pessoa.nome.toUpperCase().indexOf(nome.toUpperCase())>-1){
+            console.log(pessoa.nome.toLowerCase())
+        } 
+    });
 }
+// buscarPessoaPorNome('hen')
 
-console.log(buscarPorNome('pedro de lara').endereco);
+
+pessoas_nomes.push({'nome':'jucy'});
+console.log(pessoas_nomes);
+
 

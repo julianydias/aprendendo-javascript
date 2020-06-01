@@ -95,9 +95,8 @@ function getResult() {
 const $CONSOLE = document.getElementById('console');
 
 const checkInputTel = function (e) {
-    const value = this.value = this.value.replace(/[^\d | + \-  \.  \*  \/  \(  \)]/, '');
+    const value = this.value = validatorCharacter(this.value);
     restartCursor(this, value.length);
-
 }
 
 $CONSOLE.addEventListener('input', checkInputTel);
@@ -108,6 +107,16 @@ $CONSOLE.addEventListener('keydown', (e) => {
     }
 });
 
+
+function validatorCharacter(valueConsole) {
+    let value = valueConsole.replace(/[^\d | + \-  \.  \*  \/  \(  \)]/, '');
+    const repeatOperator = value.search(/[/|*|+|.|-][/|*|+|.|-]/g);
+    if (repeatOperator > -1) {
+        value = value.substring(0, repeatOperator+1) + value.substring(repeatOperator + 2, value.length);
+        validatorCharacter(value);
+    }
+    return value;
+}
 
 // function operation(operatiors, numbers) {
 //     if (operatiors.length && numbers.length > 1) {

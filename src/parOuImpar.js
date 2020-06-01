@@ -8,9 +8,10 @@
  */
 function parOuImpar(numero) {//4g
 
-    var substituido = numero.replace(/[^\d]/g, 'naoNumeros'); //4naoNumeros
-    var existeDiferenteNumero = substituido.indexOf('naoNumeros');//4|naoNumeros|
-//                                                                  0     1 
+    //var substituido = numero.replace(/[^\d]/g, 'naoNumeros'); //4naoNumeros
+    //var existeDiferenteNumero = substituido.indexOf('naoNumeros');//4|naoNumeros|
+    var existeDiferenteNumero = numero.search(/[^\d]/g);
+
     if (existeDiferenteNumero != -1) {
         console.log('o valor informado é invalido');
     } else {
@@ -25,4 +26,4 @@ function parOuImpar(numero) {//4g
 
 }
 
-parOuImpar('20')
+parOuImpar('2~~0')

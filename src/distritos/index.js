@@ -32,13 +32,8 @@
  *      o nome de uma funcao nada mais é do que uma variavel que pode ser executada.
  * os '()' sao os parametros da funcao, os parametros sao os valores de entrada, 
  *      uma funcao pode conter varios parametros ou nenhum,como é o caso desse exemplo.
- * as '{}' sao o bloco de instrucao/execucao,
- *      todo codigo que estiver descrito dentro de {} sera executado qdo a funcao for chamada.
- */
-function funcaoTeste() {
-    //codigos que serao executados
-}
-/**
+ * as '{}' sao o bloco de inst
+
  * ex2:
  * neste seghundo exemplo a funcao teste2 contem apenas um parametro.
  * A estrutura do primeiro e do segundo exemplo é a mesma,
@@ -163,6 +158,18 @@ telefone => '(45) ' + telefone;
 
 
 // CONCEITO DO INTERADOR FOREACH
+/*
+ function forEatao(funcao_que_vc_me_passou){
+    for(let indice=0; indice < distritos.length; indice = indice+1) {
+        let distrito = distritos[indice];
+        funcao_que_vc_me_passou(distrito);
+    }
+}
+
+forEatao(function nomesDistritos(distrito){
+    nomeDistritos.push(distrito.nome);
+});
+*/
 
 /**
  * um forEach é uma funcao que pode ser acessada a partir de um array
@@ -239,7 +246,6 @@ distritos.forEach(function nomesDistritos(distrito){
 //ok  deryigyuo gty80h
 
 
-
 /**
  * 3
  * popular lista nomesDistritosSemRepetir com apenas os nomes dos distritos
@@ -254,7 +260,7 @@ distritos.forEach(function distritosSemRepetir(distrito){
         nomesDistritosSemRepetir.push(distrito.nome);
     }
 })
-console.log(nomesDistritosSemRepetir.length);
+// console.log(nomesDistritosSemRepetir.length);
 // console.log(nomesDistritosSemRepetir);
 
 /**
@@ -286,7 +292,7 @@ distritos.forEach(function municipiosSemRepetir(distrito){
         nomesMunicipiosSemRepetir.push(distrito.municipio.nome);
     }
 })
-console.log(nomesMunicipiosSemRepetir.length);
+// console.log(nomesMunicipiosSemRepetir.length);
 // console.log(nomesMunicipiosSemRepetir);
 
 /**
@@ -305,15 +311,10 @@ nomesDistritosSemRepetir.forEach(function qtdadeNomesIguais(nomeDistrito){
     }
 
 });
-
-console.log('iguais: '+ nomesIguais);
-console.log('diferentes: ' + nomesDiferentes);
+// console.log('iguais: '+ nomesIguais);
+// console.log('diferentes: ' + nomesDiferentes);
 
       
-
-
-
-
 
 
 
@@ -326,6 +327,13 @@ console.log('diferentes: ' + nomesDiferentes);
  * printar no terminal a lista nomesEstados
  */
 let nomesEstados =[];
+distritos.forEach(function nomesDosEstados(distrito){
+nomesEstados.push(distrito.municipio.microrregiao.mesorregiao.UF.nome)
+});
+console.log(nomesEstados);
+console.log(nomesEstados.length);
+
+
 
 
 /**
@@ -337,6 +345,11 @@ let nomesEstados =[];
  * printar no terminal a listanomesEstadosSemRepetir
  */
 let nomesEstadosSemRepetir = [];
+distritos.forEach(function nomesDosEstadosSemRepetir(distrito){
+    FALTA TERMINAR
+    nomesEstadosSemRepetir.push(distrito.municipio.microrregiao.mesorregiao.UF.nome)
+});
+// console.log(nomesEstadosSemRepetir);
 
 
 
